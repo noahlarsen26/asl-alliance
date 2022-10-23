@@ -1,0 +1,146 @@
+---
+title: ASL Alliance
+about: Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorum animi ratione molestias dignissimos praesentium quae, hic quis unde delectus eius officiis eos laudantium temporibus repudiandae veniam. Fugit dolore nesciunt nulla harum dolor molestiae praesentium voluptas impedit quisquam ex cupiditate placeat iste adipisci officia.
+header_about: Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium officia. Magnam inventore explicabo ut toatam eum dolores, delectus quidem?
+layout: 'base.njk'
+---
+
+    <main>
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-container">
+          <button class="side-close-btn"><i class="fa-solid fa-xmark"></i></button>
+          <ul class="sidebar-links">
+            <li>
+              <a href="#home" class="side-link">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="side-link">About</a>
+            </li>
+            <li>
+              <a href="#events" class="side-link">Events</a>
+            </li>
+            <div class="sidebar-socials">
+              <i id="facebook" class="fa-brands fa-facebook"></i>
+              <i id="twitter" class="fa-brands fa-twitter-square"></i>
+              <i id="instagram" class="fa-brands fa-instagram"></i>
+          </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- END OF SIDEBAR -->
+      <!-- NAVBAR -->
+      <section id="home" class="bg-img">
+        
+        <!-- END OF NAVBAR -->
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-banner">
+            <h1>{{ title }}</h1>
+            <div class="paragraph-container">
+              <p>
+                {{  header_about }}
+              </p>
+              <div class="hero-underline"></div>
+            </div>
+            <a href="#about">
+              <button class="hero-btn">explore</button>
+            </a>
+          </div>
+        </section>
+      </section>
+      <!-- END OF HERO -->
+    </main>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-img-container">
+        <img
+          class="about-img img"
+          src="./images/placeholder-image.jpg"
+          alt="second placeholder image"
+        />
+      </div>
+      <article class="about-text">
+        <div class="about-small">
+          <h5>about us</h5>
+        </div>
+        <h2>about {{ title }}</h2>
+        <p>
+          {{ about }}
+        </p>
+        <p>
+          {{ about }} 
+        </p>
+      </article>
+    </section>
+    
+    <!-- END OF ABOUT -->
+    <!-- EVENT SECTION -->
+    <section id="events" class="event-section">
+      <!-- TITLE -->
+      <div class="tab-title">
+        <h2>upcoming events</h2>
+        <div class="underline"></div>
+      </div>
+      <!-- TAB FILTERS -->
+      <div class="tab-container">
+        <!-- single tab -->
+        <button class="tab">
+          <h4 class="all-tab">all events</h4>
+        </button>
+        <!-- single tab -->
+        <button class="tab"><h4 class="campus-tab">campus events</h4></button>
+        <!-- single tab -->
+        <button class="tab"><h4 class="alliance-tab">alliance events</h4></button>
+      </div>
+      <!-- END OF TAB FILTERS -->
+      <ul class="event-container">
+        <!-- SINGLE EVENT -->
+        <!-- title section -->
+        {%- for post in collections.post | reverse -%}
+        <li class="single-event">
+          <div class="title-container">
+            <h3 class="single-event-title">{{ post.data.title }}</h3>
+            <div class="event-underline"></div>
+            <h5>{{ post.data.type }}</h5>
+            <!-- end of title section -->
+          </div>
+            <!-- event description -->
+            <article class="event-desc">
+              <div class="event-desc-container">
+                <p>
+                  {{ post.data.description }}
+                </p>
+                <!-- end of event description -->
+                <!-- date time rsvp -->
+                <div class="date-time-rsvp">
+                  <!-- date and time -->
+                  <h4 class="date-time">{{ post.data.date | postDate }} {{ post.data.time }}</h4>
+                  <!-- rsvp button -->
+                  
+                    <button class="rsvp-btn" data-id="">rsvp here</button>
+                </div>
+              </div>
+            </article>
+        </li>
+        {%- endfor -%}
+        <!-- end of single event -->
+      </ul>
+    </section>
+    <article class="rsvp-overlay hide-rsvp">
+      <div class="rsvp-overlay-container">
+
+        <iframe id="rsvp-form" src="" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+        <div class="x-container">
+          <button class="form-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+    </article>
+    <!-- END OF EVENTS -->
+    <!-- FOOTER -->
+    
+    <!-- END OF FOOTER -->
+  <script src="./app.js"></script>
+  <script src="./link.js"></script>
+

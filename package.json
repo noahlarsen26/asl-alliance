@@ -1,0 +1,24 @@
+{
+  "name": "asl-alliance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahlarsen26/asl-alliance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahlarsen26/asl-alliance/issues"
+  },
+  "homepage": "https://github.com/noahlarsen26/asl-alliance#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}

@@ -38,9 +38,9 @@ function closeRSVP() {
 const titleContainers = document.querySelectorAll(".title-container");
 
 titleContainers.forEach((eventTitle) => {
-  if (eventTitle.children[2].textContent === "campus event") {
+  if (eventTitle.children[2].textContent === "Campus Event") {
     eventTitle.children[2].classList.add("campus");
-  } else if (eventTitle.children[2].textContent === "alliance event") {
+  } else if (eventTitle.children[2].textContent === "Alliance Event") {
     eventTitle.children[2].classList.add("alliance");
   }
 

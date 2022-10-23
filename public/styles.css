@@ -470,11 +470,14 @@ h2 span {
   font-size: 20px;
 }
 .event-container {
-  max-width: 1100px;
+  max-width: 75%;
   margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.event-container li {
+  list-style-type: none;
 }
 .single-event {
   border: solid 5px black;
