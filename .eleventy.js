@@ -1,6 +1,5 @@
 // prettier-ignore
 const { DateTime } = require("luxon");
-const filters = require("./src/filters.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles.css");
