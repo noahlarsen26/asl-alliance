@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: noahlarsen26/asl-alliance
   branch: main
 media-folder: "public/images"
 public-folder: "/images"
