@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "public/images"
 public_folder: "/images"
+media_library: "/"
 collections:
   - name: "event"
     label: "Event"
