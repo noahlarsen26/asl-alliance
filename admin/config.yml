@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: public/images
-public_folder: /images
+  site_domain: https://chipper-tiramisu-4c891c.netlify.app/
+media_folder: "public/images"
+public_folder: "/images"
+media_library: "/"
 collections:
   - name: "event"
     label: "Event"
