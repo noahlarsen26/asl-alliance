@@ -1,9 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "public/images"
-public_folder: "/images"
-media_library: "/"
+media_folder: public/images
+public_folder: /images
 collections:
   - name: "event"
     label: "Event"
