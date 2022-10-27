@@ -19,6 +19,8 @@ collections:
           label: "Event DateTime",
           name: "date",
           widget: "datetime",
+          default: "",
           date_format: "MM.DD.YYYY",
-          time_format: "HH:mm",
+          format: "MM-DD-YYYY HH:mm ZZ",
+          picker_utc: false,
         }
