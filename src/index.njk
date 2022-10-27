@@ -97,7 +97,7 @@ layout: 'base.njk'
       <ul class="event-container">
         <!-- SINGLE EVENT -->
         <!-- title section -->
-        {%- for post in collections.post | reverse -%}
+        {%- for post in collections.post -%}
         <li class="single-event">
           <div class="title-container">
             <h3 class="single-event-title">{{ post.data.title }}</h3>
