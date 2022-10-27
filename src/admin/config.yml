@@ -15,4 +15,10 @@ collections:
       - { label: "Event Title", name: "title", widget: "string" }
       - { label: "Event Type", name: "type", widget: "string" }
       - { label: "Event Description", name: "description", widget: "markdown" }
-      - { label: "Event Date", name: "date", widget: "datetime" }
+      - {
+          label: "Event DateTime",
+          name: "date",
+          widget: "datetime",
+          date_format: "MM.DD.YYYY",
+          time_format: "HH:mm",
+        }
