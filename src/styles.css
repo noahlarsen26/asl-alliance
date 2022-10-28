@@ -561,8 +561,8 @@ h2 span {
   cursor: pointer;
 }
 @media screen and (max-width: 375px) {
-  .rsvp-btn {
-    padding: 10px;
+  .single-event {
+    margin-right: 5px;
   }
 }
 /* END OF EVENT SECTION */
