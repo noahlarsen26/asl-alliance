@@ -263,14 +263,12 @@ h5 a {
   cursor: pointer;
   margin: 2rem;
 }
-#facebook,
-#twitter,
+
 #instagram {
   color: black;
   padding-inline: 2rem;
 }
-#facebook:hover,
-#twitter:hover,
+
 #instagram:hover {
   color: #dd4055;
 }
@@ -355,9 +353,8 @@ h5 a {
   .paragraph-container {
     flex-direction: column;
   }
-  .underline {
-    top: 0;
-    left: 50%;
+  .hero-underline {
+    visibility: hidden;
   }
   .nav-logo {
     margin-left: 1rem;
@@ -469,12 +466,19 @@ h2 span {
 .tab h4 {
   font-size: 20px;
 }
+@media screen and (max-width: 760px) {
+  .underline {
+    top: 0;
+    left: 50%;
+  }
+}
+
 .event-container {
-  max-width: 75%;
+  max-width: 1100px;
   margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .event-container li {
   list-style-type: none;
@@ -553,6 +557,11 @@ h2 span {
   border-radius: 10px;
   transition: all 0.2s linear;
   cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  .single-event {
+    /* margin-right: 35px; */
+  }
 }
 /* END OF EVENT SECTION */
 /* FOOTER */

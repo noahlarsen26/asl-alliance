@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
-    "dev": "next dev -p 3005"
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
