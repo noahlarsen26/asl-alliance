@@ -6,5 +6,5 @@ description: Lorem ipsum dolor, sit amet consectetur adipisicing
   accusamus pariatur culpa a eum nemo totam, magni vitae, vel exercitationem
   quisquam, magnam fugit!
 date: 2022-05-08
-# time: 7:00pm
+time: 7:00pm
 ---
