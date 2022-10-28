@@ -476,7 +476,7 @@ h2 span {
 }
 
 .event-container {
-  max-width: 75%;
+  max-width: 100%;
   margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
