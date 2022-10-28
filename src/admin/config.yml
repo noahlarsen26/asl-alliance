@@ -7,7 +7,7 @@ public_folder: "/images"
 
 collections:
   - name: "event"
-    label: "Event"
+    label: "Events"
     folder: "src/event"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
