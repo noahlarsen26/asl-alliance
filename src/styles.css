@@ -562,7 +562,7 @@ h2 span {
 }
 @media screen and (max-width: 375px) {
   .single-event {
-    margin-right: 16px;
+    margin-right: 25px;
   }
 }
 /* END OF EVENT SECTION */
