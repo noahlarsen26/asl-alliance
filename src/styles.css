@@ -355,9 +355,8 @@ h5 a {
   .paragraph-container {
     flex-direction: column;
   }
-  .underline {
-    top: 0;
-    left: 50%;
+  .hero-underline {
+    visibility: hidden;
   }
   .nav-logo {
     margin-left: 1rem;
@@ -469,6 +468,13 @@ h2 span {
 .tab h4 {
   font-size: 20px;
 }
+@media screen and (max-width: 760px) {
+  .underline {
+    top: 0;
+    left: 50%;
+  }
+}
+
 .event-container {
   max-width: 75%;
   margin: 3rem auto;
@@ -553,6 +559,11 @@ h2 span {
   border-radius: 10px;
   transition: all 0.2s linear;
   cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  .rsvp-btn {
+    padding: 10px;
+  }
 }
 /* END OF EVENT SECTION */
 /* FOOTER */
