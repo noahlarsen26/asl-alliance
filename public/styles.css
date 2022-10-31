@@ -464,6 +464,7 @@ h2 span {
 .tab-title {
   text-align: center;
   position: relative;
+  border: solid 1px transparent;
 }
 .tab-underline {
   text-decoration: underline;
