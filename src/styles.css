@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
 *,
 ::after,
 ::before {
@@ -286,6 +291,7 @@ h5 a {
 }
 .hero-banner {
   max-width: 1100px;
+  min-height: 100%;
 }
 .paragraph-container {
   min-height: 60px;
@@ -358,6 +364,16 @@ h5 a {
   }
   .nav-logo {
     margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .hero {
+    padding-top: 30px;
   }
 }
 /* END OF HEADER */
@@ -440,22 +456,19 @@ h2 span {
   min-height: 100vh;
   max-width: 100%;
   color: black;
-  /* border-bottom: solid 1px black; */
 }
 /* TABS */
 .tab-container {
   text-align: center;
 }
 .tab-title {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   position: relative;
 }
 .tab-underline {
   text-decoration: underline;
 }
 .tab {
-  margin-top: 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -476,6 +489,7 @@ h2 span {
 .event-container {
   max-width: 1100px;
   margin: 3rem auto;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -486,10 +500,18 @@ h2 span {
 .single-event {
   border: solid 5px black;
   max-width: 350px;
-  margin: 0.5rem auto;
   background: #f4f7fa;
   min-height: 600px;
+  margin-top: 1rem;
 }
+
+@media screen and (max-width: 1055px) {
+  .event-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
 .hide-event {
   display: none;
 }
@@ -558,11 +580,7 @@ h2 span {
   transition: all 0.2s linear;
   cursor: pointer;
 }
-@media screen and (max-width: 375px) {
-  .single-event {
-    /* margin-right: 35px; */
-  }
-}
+
 /* END OF EVENT SECTION */
 /* FOOTER */
 .footer {
@@ -588,13 +606,14 @@ h2 span {
   justify-content: space-around;
   align-items: center;
 }
-
+.footer-links li {
+  width: 20%;
+}
 .footer-links a {
   text-decoration: none;
   color: black;
   font-size: 1.25rem;
   text-align: center;
-  margin-right: 5rem;
 }
 .footer-links a:hover {
   color: gray;
@@ -650,8 +669,8 @@ h2 span {
 }
 
 @media screen and (max-width: 450px) {
-  .footer-links a {
-    margin-right: 0;
+  .footer {
+    /* width: 100%; */
   }
 }
 
