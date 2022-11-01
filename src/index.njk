@@ -63,7 +63,7 @@ layout: 'base.njk'
         <h2>about {{ title }}</h2>
         {%- for about in collections.about -%}
         <p>
-          {{ about }}
+          {{ about.data.description }}
         </p>
         {%- endfor -%}
       </article>
