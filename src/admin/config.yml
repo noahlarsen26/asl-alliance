@@ -25,4 +25,3 @@ collections:
     fields:
       - { label: "Paragraph Number", name: "title", widget: "string" }
       - { label: "Paragraph", name: "description", widget: "markdown" }
-      - { label: "About Image", name: "image", widget: "image" }
