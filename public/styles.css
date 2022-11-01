@@ -50,6 +50,12 @@ h4 {
   display: block;
   position: relative;
 }
+@media screen and (max-width: 700px) {
+  .bg-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(./images/placeholder-img-3.jpg) center/cover no-repeat fixed;
+  }
+}
 .form-body {
   background: #3b3f3f;
   color: black;
