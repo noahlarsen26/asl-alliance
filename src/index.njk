@@ -1,6 +1,5 @@
 ---
 title: ASL Alliance
-about: Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorum animi ratione molestias dignissimos praesentium quae, hic quis unde delectus eius officiis eos laudantium temporibus repudiandae veniam. Fugit dolore nesciunt nulla harum dolor molestiae praesentium voluptas impedit quisquam ex cupiditate placeat iste adipisci officia.
 header_about: Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium officia. Magnam inventore explicabo ut toatam eum dolores, delectus quidem?
 layout: 'base.njk'
 ---
@@ -29,10 +28,7 @@ layout: 'base.njk'
         </div>
       </aside>
       <!-- END OF SIDEBAR -->
-      <!-- NAVBAR -->
       <section id="home" class="bg-img">
-        
-        <!-- END OF NAVBAR -->
         <!-- HERO -->
         <section class="hero">
           <div class="hero-banner">
@@ -65,12 +61,11 @@ layout: 'base.njk'
           <h5>about us</h5>
         </div>
         <h2>about {{ title }}</h2>
+        {%- for about in collections.about -%}
         <p>
           {{ about }}
         </p>
-        <p>
-          {{ about }} 
-        </p>
+        {%- endfor -%}
       </article>
     </section>
     

@@ -17,6 +17,7 @@ body {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -45,7 +46,7 @@ h4 {
 .bg-img {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(./images/placeholder-img.jpg) center/cover no-repeat fixed;
-  min-height: 100vh;
+  height: 100vh;
   display: block;
   position: relative;
 }
