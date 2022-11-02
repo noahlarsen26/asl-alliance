@@ -1,5 +1,5 @@
 ---
-title: Event Test
+title: Event Testy
 type: Alliance Event
 description: Lorem ipsum dolor, sit amet consectetur adipisicing
   elit.Blanditiis, porro! Hic molestias deleniti voluptate numquam adipisci
