@@ -29,7 +29,7 @@ fetch(url)
 // CLOSE RSVP FORM
 
 formCloseBtn.addEventListener("click", closeRSVP);
-// function to close the RSVP form
+
 function closeRSVP() {
   document.querySelector(".rsvp-overlay").classList.add("hide-rsvp");
 }
@@ -49,14 +49,14 @@ titleContainers.forEach((eventTitle) => {
     document.querySelector(".all-tab").classList.add("tab-underline");
   });
 
-  for (let i = 0; i < tabs.length; i++) {
+  tabs.forEach((tab) => {
     const allTab = document.querySelector(".all-tab");
     const campusTab = document.querySelector(".campus-tab");
     const allianceTab = document.querySelector(".alliance-tab");
     const allianceHeadings = document.querySelectorAll(".alliance");
     const campusHeadings = document.querySelectorAll(".campus");
 
-    tabs[i].addEventListener("click", (e) => {
+    tab.addEventListener("click", (e) => {
       campusHeadings.forEach((campusHeading) => {
         allianceHeadings.forEach((allianceHeading) => {
           if (e.target.classList.contains("all-tab")) {
@@ -91,5 +91,5 @@ titleContainers.forEach((eventTitle) => {
         });
       });
     });
-  }
+  });
 });

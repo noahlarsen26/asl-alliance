@@ -13,6 +13,7 @@ const sideLinks = document.querySelectorAll(".side-link");
 
 // NAVBAR COLOR CHANGES ON SCROLL
 window.addEventListener("scroll", navScroll);
+
 function navScroll() {
   navLinks.forEach((navLink) => {
     if (window.scrollY > 60) {
