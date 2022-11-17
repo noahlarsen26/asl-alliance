@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-} */
+
 *,
 ::after,
 ::before {
@@ -43,6 +39,8 @@ h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* Background Image */
 .bg-img {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(./images/placeholder-img.jpg) center/cover no-repeat fixed;
@@ -50,73 +48,15 @@ h4 {
   display: block;
   position: relative;
 }
+
+/* switch to different image on smaller screen */
 @media screen and (max-width: 700px) {
   .bg-img {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(./images/placeholder-img-3.jpg) center/cover no-repeat fixed;
   }
 }
-.form-body {
-  background: #3b3f3f;
-  color: black;
-  overflow: hidden;
-}
-.form {
-  width: 50vw;
-  color: black;
-  max-width: 1170px;
-  background: #fff;
-  border-radius: 0.25rem;
-  padding: 1.5rem 2.5rem;
-  margin: 3rem auto;
-}
-.form h4 {
-  text-align: center;
-}
-.form-label {
-  display: block;
-  font-size: 0.7em;
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-.form-input {
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-}
-.form-row {
-  margin-bottom: 1rem;
-}
-.form-alert {
-  color: #d7263d;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  visibility: hidden;
-}
-.form-btn {
-  text-transform: capitalize;
-  border: none;
-  background: #d7263d;
-  color: #fff;
-  width: 100%;
-  height: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-.form-btn:hover {
-  background: #dd4055;
-}
-.existing-acc {
-  text-transform: capitalize;
-  color: white;
-  text-align: center;
-}
-h5 a {
-  color: white;
-}
+
 /* NAVBAR */
 .navbar {
   width: 100vw;
@@ -322,9 +262,7 @@ h5 a {
   width: 3rem;
   height: 0.15rem;
 }
-.hero-banner span {
-  text-transform: uppercase;
-}
+
 .hero-btn {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
@@ -438,9 +376,7 @@ h5 a {
 h2 span {
   text-transform: capitalize;
 }
-.about-text span {
-  text-transform: uppercase;
-}
+
 /* about media queries */
 @media screen and (max-width: 1135px) {
   #about {
@@ -513,19 +449,8 @@ h2 span {
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 1055px) {
-  .event-container {
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-
 .hide-event {
   display: none;
-}
-.single-event p {
-  color: hsl(210, 22%, 49%);
-  height: 100%;
 }
 /* title container */
 .title-container {
@@ -565,6 +490,10 @@ h2 span {
   justify-content: space-between;
   height: 90%;
 }
+.event-desc-container p {
+  color: hsl(210, 22%, 49%);
+  height: 100%;
+}
 .date-time-rsvp {
   height: 100%;
   display: flex;
@@ -589,7 +518,80 @@ h2 span {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1055px) {
+  .event-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 /* END OF EVENT SECTION */
+
+/* RSVP FORMS */
+.rsvp-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rsvp-overlay-container {
+  position: relative;
+}
+#rsvp-form {
+  z-index: 5;
+  transition: all 0.2s linear;
+  background: white;
+}
+.x-container {
+  position: absolute;
+  top: 0;
+  right: -2rem;
+}
+.form-close-btn {
+  position: absolute;
+  background: none;
+  border: transparent;
+  color: rgb(242, 156, 156);
+  font-size: 3.5rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  z-index: 6;
+}
+.form-close-btn:hover {
+  color: #bb2525;
+}
+.hide-rsvp {
+  display: none;
+}
+
+/* form popup media queries */
+@media screen and (max-width: 835px) {
+  #rsvp-form {
+    width: 450px;
+    height: 515px;
+  }
+}
+@media screen and (max-width: 615px) {
+  #rsvp-form {
+    width: 312px;
+    height: 575px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #rsvp-form {
+    width: 100vw;
+    height: 80vh;
+    margin-top: 20vh;
+  }
+  .x-container {
+    top: 10%;
+    right: 15%;
+  }
+}
 /* FOOTER */
 .footer {
   background: white;
@@ -656,10 +658,6 @@ h2 span {
   color: black;
   font-size: 1rem;
 }
-.social-link a {
-  font-weight: bold;
-  text-decoration: none;
-}
 
 .copyright-section {
   font-size: 20px;
@@ -676,77 +674,4 @@ h2 span {
   }
 }
 
-@media screen and (max-width: 450px) {
-  .footer {
-    /* width: 100%; */
-  }
-}
-
 /* END OF FOOTER */
-.rsvp-overlay {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.rsvp-overlay-container {
-  position: relative;
-}
-#rsvp-form {
-  z-index: 5;
-  transition: all 0.2s linear;
-  background: white;
-}
-.x-container {
-  position: absolute;
-  top: 0;
-  right: -2rem;
-}
-.form-close-btn {
-  position: absolute;
-  background: none;
-  border: transparent;
-  color: rgb(242, 156, 156);
-  font-size: 3.5rem;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  z-index: 6;
-}
-.form-close-btn:hover {
-  color: #bb2525;
-}
-.hide-rsvp {
-  display: none;
-}
-.output {
-  color: black;
-}
-/* form popup media queries */
-@media screen and (max-width: 835px) {
-  #rsvp-form {
-    width: 450px;
-    height: 515px;
-  }
-}
-@media screen and (max-width: 615px) {
-  #rsvp-form {
-    width: 312px;
-    height: 575px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #rsvp-form {
-    width: 100vw;
-    height: 80vh;
-    margin-top: 20vh;
-  }
-  .x-container {
-    top: 10%;
-    right: 15%;
-  }
-}
