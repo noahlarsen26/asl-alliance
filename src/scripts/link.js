@@ -49,47 +49,63 @@ titleContainers.forEach((eventTitle) => {
     document.querySelector(".all-tab").classList.add("tab-underline");
   });
 
-  tabs.forEach((tab) => {
+  filter(tabs);
+});
+
+function filter(filters) {
+  filters.forEach((filter) => {
     const allTab = document.querySelector(".all-tab");
-    const campusTab = document.querySelector(".campus-tab");
-    const allianceTab = document.querySelector(".alliance-tab");
     const allianceHeadings = document.querySelectorAll(".alliance");
     const campusHeadings = document.querySelectorAll(".campus");
 
-    tab.addEventListener("click", (e) => {
+    filter.addEventListener("click", (e) => {
       campusHeadings.forEach((campusHeading) => {
         allianceHeadings.forEach((allianceHeading) => {
           if (e.target.classList.contains("all-tab")) {
-            allTab.classList.add("tab-underline");
-            campusTab.classList.remove("tab-underline");
-            allianceTab.classList.remove("tab-underline");
-            allianceHeading
-              .closest(".single-event")
-              .classList.remove("hide-event");
-            campusHeading
-              .closest(".single-event")
-              .classList.remove("hide-event");
+            all(allTab, campusHeading, allianceHeading);
           } else if (e.target.classList.contains("campus-tab")) {
-            campusTab.classList.add("tab-underline");
-            allTab.classList.remove("tab-underline");
-            allianceTab.classList.remove("tab-underline");
-            allianceHeading
-              .closest(".single-event")
-              .classList.add("hide-event");
-            campusHeading
-              .closest(".single-event")
-              .classList.remove("hide-event");
+            campus(allTab, campusHeading, allianceHeading);
           } else if (e.target.classList.contains("alliance-tab")) {
-            allianceTab.classList.add("tab-underline");
-            allTab.classList.remove("tab-underline");
-            campusTab.classList.remove("tab-underline");
-            campusHeading.closest(".single-event").classList.add("hide-event");
-            allianceHeading
-              .closest(".single-event")
-              .classList.remove("hide-event");
+            alliance(allTab, campusHeading, allianceHeading);
           }
         });
       });
     });
   });
-});
+}
+
+// underline all events tab
+function all(all, campus, alliance) {
+  const campusTab = document.querySelector(".campus-tab");
+  const allianceTab = document.querySelector(".alliance-tab");
+
+  all.classList.add("tab-underline");
+  campusTab.classList.remove("tab-underline");
+  allianceTab.classList.remove("tab-underline");
+  alliance.closest(".single-event").classList.remove("hide-event");
+  campus.closest(".single-event").classList.remove("hide-event");
+}
+
+// underline campus events tab
+function campus(all, campus, alliance) {
+  const campusTab = document.querySelector(".campus-tab");
+  const allianceTab = document.querySelector(".alliance-tab");
+
+  campusTab.classList.add("tab-underline");
+  all.classList.remove("tab-underline");
+  allianceTab.classList.remove("tab-underline");
+  alliance.closest(".single-event").classList.add("hide-event");
+  campus.closest(".single-event").classList.remove("hide-event");
+}
+
+// underline alliance events tab
+function alliance(all, campus, alliance) {
+  const campusTab = document.querySelector(".campus-tab");
+  const allianceTab = document.querySelector(".alliance-tab");
+
+  allianceTab.classList.add("tab-underline");
+  all.classList.remove("tab-underline");
+  campusTab.classList.remove("tab-underline");
+  campus.closest(".single-event").classList.add("hide-event");
+  alliance.closest(".single-event").classList.remove("hide-event");
+}
