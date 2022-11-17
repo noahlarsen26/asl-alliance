@@ -1,6 +1,8 @@
 # ASL Alliance
 
-A website for North Central University's ASL club. It showcases what the club is all about, and is a place where people can RSVP for upcoming club or campus events. It was built with HTML, CSS, Javascript, Nunjucks, and 11ty.
+A website for North Central University's ASL club. It showcases what the club is all about, and is a place where people can RSVP for upcoming club or campus events. 
+
+It was built with HTML, CSS, Javascript, Nunjucks, and 11ty.
 
 ## Screenshots
 
