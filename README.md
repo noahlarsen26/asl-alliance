@@ -20,12 +20,12 @@ To Start Server:
 
 To Visit App:
 
-localhost:3000/
+localhost:8081/
 
-## Reflection
+## Contact
 
-This is a freelance project that I built for North Central University's ASL club.  Project goals included having a place where they can illustrate the essence of the club and a place where the students are able to RSVP for upcoming events.  
+If you would like to contact me you can reach me at [noahlarsen24@gmail.com](noahlarsen24@gmail.com).
 
-Originally the client wanted only a place where the students could RSVP for an upcoming event, but they eventually changed their mind to wanting a full website for the club, and to also be able to edit parts of the website.  In order to let them edit parts of the site I used the netlify content management system which creates an admin panel that is linked to github, so it pushes a change live to github, that triggers netlify to rebuild the website and the site is rebuilt within thirty seconds to a minute.
+## License
 
-One of the main challenges I faced was integrating the existing website into the netlify cms for the client to be able to edit parts of the site.  It requires you to use a static site generator which I previously had no experience in.  With the help of a video called [Turn static HTML/CSS into a blog with CMS using the JAMStack](https://www.youtube.com/watch?v=4wD00RT6d-g), I was able to successfully merge the netlify cms and site together.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
