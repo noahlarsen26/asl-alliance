@@ -321,6 +321,7 @@ h4 {
     padding-top: 30px;
   }
 }
+
 /* END OF HEADER */
 /* ABOUT */
 #about {
@@ -595,13 +596,13 @@ h2 span {
 /* FOOTER */
 .footer {
   background: white;
-  height: 10vh;
+  height: 23vh;
   color: black;
 }
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
-  height: 100%;
+  height: calc(100% - 1.5rem);
 }
 /* footer nav */
 .footer-nav {
@@ -631,7 +632,6 @@ h2 span {
 
 /* footer social media */
 .social-media {
-  height: 100%;
   max-width: 100%;
 }
 .socials-container {
@@ -640,7 +640,6 @@ h2 span {
   justify-content: space-around;
   max-width: 350px;
   margin: 0 auto;
-  /* border: solid 1px red; */
 }
 .insta {
   display: inline-block;
@@ -673,5 +672,26 @@ h2 span {
     max-width: 900px;
   }
 }
-
+@media screen and (min-width: 1440px) {
+  .footer-container {
+    margin-top: 1.5rem;
+  }
+  .footer-nav,
+  .social-media,
+  .copyright-section {
+    padding: 5px;
+  }
+  .footer-links a {
+    font-size: 1.5rem;
+  }
+  .socials-container {
+    max-width: 450px;
+  }
+  .email :first-child {
+    font-size: 1.25rem;
+  }
+  .copyright-section {
+    font-size: 24px;
+  }
+}
 /* END OF FOOTER */
