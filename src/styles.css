@@ -615,11 +615,17 @@ h2 span {
   align-items: center;
   gap: 3rem;
   width: 100%;
+  /* border: solid 1px red; */
 }
 .footer-title {
   height: 100%;
+  border-right: solid 1px gray;
+  width: 15rem;
 }
 /* footer nav */
+.footer-nav {
+  /* border: solid 1px blue; */
+}
 .footer-links {
   list-style-type: none;
   height: 100%;
@@ -637,13 +643,16 @@ h2 span {
   color: gray;
 }
 /* footer social media */
+.social-media {
+  /* border: solid 1px green; */
+}
 .socials-container {
   font-size: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 375px;
   margin: 0 auto;
+  /* border: solid 1px indigo; */
 }
 .insta {
   display: inline-block;
@@ -661,6 +670,7 @@ h2 span {
 .copyright-section {
   font-size: 20px;
   text-transform: capitalize;
+  /* border: solid 1px blue; */
 }
 .copyright {
   max-width: 1100px;
@@ -690,6 +700,9 @@ h2 span {
   }
   .footer-title {
     height: 90px;
+    text-align: center;
+    border-right: none;
+    border-bottom: solid 1px gray;
   }
 }
 @media screen and (max-width: 375px) {
