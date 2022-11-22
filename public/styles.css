@@ -615,7 +615,6 @@ h2 span {
   align-items: center;
   gap: 3rem;
   width: 100%;
-  /* border: solid 1px red; */
 }
 .footer-title {
   height: 100%;
@@ -623,9 +622,6 @@ h2 span {
   width: 15rem;
 }
 /* footer nav */
-.footer-nav {
-  /* border: solid 1px blue; */
-}
 .footer-links {
   list-style-type: none;
   height: 100%;
@@ -643,16 +639,12 @@ h2 span {
   color: gray;
 }
 /* footer social media */
-.social-media {
-  /* border: solid 1px green; */
-}
 .socials-container {
   font-size: 15px;
   display: flex;
   flex-direction: column;
   max-width: 375px;
   margin: 0 auto;
-  /* border: solid 1px indigo; */
 }
 .insta {
   display: inline-block;
@@ -666,11 +658,10 @@ h2 span {
   color: white;
   font-size: 1rem;
 }
-
+/* footer copyright */
 .copyright-section {
   font-size: 20px;
   text-transform: capitalize;
-  /* border: solid 1px blue; */
 }
 .copyright {
   max-width: 1100px;
