@@ -266,7 +266,9 @@ h4 {
 .hero-btn {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-size: 35px;
+  width: 11rem;
+  height: 4.5rem;
+  font-size: 30px;
   padding: 15px;
   background: #9d7ab2;
   color: white;
@@ -276,7 +278,6 @@ h4 {
   cursor: pointer;
 }
 .hero-btn:hover {
-  padding: 18px;
   background: white;
   color: #9d7ab2;
   border: solid 2px #9d7ab2;
@@ -397,9 +398,10 @@ h2 span {
 /* EVENT SECTION */
 .event-section {
   background: #f4f7fa;
-  min-height: 100vh;
+  min-height: calc(100vh - 1rem);
   max-width: 100%;
   color: black;
+  margin-bottom: 1rem;
 }
 /* TABS */
 .tab-container {
@@ -448,6 +450,7 @@ h2 span {
   background: #f4f7fa;
   min-height: 600px;
   margin-top: 1rem;
+  border-radius: 5%;
 }
 
 .hide-event {
@@ -456,6 +459,7 @@ h2 span {
 /* title container */
 .title-container {
   background: #292929;
+  border-radius: 3%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -509,8 +513,10 @@ h2 span {
 .rsvp-btn {
   text-transform: uppercase;
   padding: 15px;
+  width: 67%;
+  height: 4.5rem;
+  font-size: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 35px;
   background: #9d7ab2;
   color: white;
   border: none;
