@@ -25,3 +25,11 @@ collections:
     fields:
       - { label: "Paragraph Number", name: "title", widget: "string" }
       - { label: "Paragraph", name: "description", widget: "markdown" }
+  - name: "banner"
+    label: "Banner Paragraph"
+    folder: "src/banner"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Paragraph Number", name: "title", widget: "string" }
+      - { label: "Paragraph", name: "description", widget: "markdown" }

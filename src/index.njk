@@ -1,6 +1,5 @@
 ---
 title: ASL Alliance
-header_about: Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium officia. Magnam inventore explicabo ut toatam eum dolores, delectus quidem?
 layout: 'base.njk'
 ---
 
@@ -34,9 +33,11 @@ layout: 'base.njk'
           <div class="hero-banner">
             <h1>{{ title }}</h1>
             <div class="paragraph-container">
+              {%- for ban in collections.ban -%}
               <p>
-                {{  header_about }}
+                {{  ban.data.description }}
               </p>
+              {%- endfor -%}
               <div class="hero-underline"></div>
             </div>
             <a href="#about">
