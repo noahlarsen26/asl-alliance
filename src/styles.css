@@ -518,10 +518,10 @@ h2 span {
 }
 /* event button */
 .rsvp-btn {
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 15px;
   width: 67%;
-  height: 4.5rem;
+  height: 3.5rem;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   background: #9d7ab2;
