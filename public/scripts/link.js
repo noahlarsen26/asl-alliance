@@ -1,5 +1,5 @@
 let url =
-  "https://docs.google.com/spreadsheets/d/1GNLSiruAG3I6EWzmLGf_qbZm-cSj-9h6BmANv5vEp3k/gviz/tq?";
+  "https://docs.google.com/spreadsheets/d/1UfagbW5olfbHknvftYWfQVCPnVnNhFEyCm-FJc4Hz7E/gviz/tq?";
 const query = encodeURIComponent("Select A,B");
 url = url + "&tq=" + query;
 
