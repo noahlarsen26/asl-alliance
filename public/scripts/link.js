@@ -2,10 +2,10 @@ let url =
   "https://docs.google.com/spreadsheets/d/1UfagbW5olfbHknvftYWfQVCPnVnNhFEyCm-FJc4Hz7E/gviz/tq?";
 const query = encodeURIComponent("Select A,B");
 url = url + "&tq=" + query;
-
-const rsvpBtn1 = document.getElementById("rsvp-btn-1");
-const rsvpBtn2 = document.getElementById("rsvp-btn-2");
-const rsvpBtn3 = document.getElementById("rsvp-btn-3");
+// const interpreterBtn = document.querySelector;
+// const rsvpBtn1 = document.getElementById("rsvp-btn-1");
+// const rsvpBtn2 = document.getElementById("rsvp-btn-2");
+// const rsvpBtn3 = document.getElementById("rsvp-btn-3");
 
 fetch(url)
   .then((res) => res.text())
@@ -51,7 +51,16 @@ titleContainers.forEach((eventTitle) => {
 
   filter(tabs);
 });
-
+function removeButton() {
+  const event = document.querySelectorAll(".single-event");
+  for (let i = 0; i < event.length; i++) {
+    if (event[i].children[0].children[2].textContent === "Alliance Event") {
+      event[i].children[1].children[0].children[1].children[1].style.display =
+        "none";
+    }
+  }
+}
+removeButton();
 function filter(filters) {
   filters.forEach((filter) => {
     const allTab = document.querySelector(".all-tab");
