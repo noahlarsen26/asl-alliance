@@ -407,7 +407,7 @@ h2 span {
   min-height: calc(100vh - 1rem);
   max-width: 100%;
   color: black;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 /* TABS */
 .tab-container {
