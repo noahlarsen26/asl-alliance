@@ -59,7 +59,7 @@ for (let i = 0; i < sideLinks.length; i++) {
 }
 
 // slide home images
-let i = 0;
+let index = 0;
 let slideTime = 5000;
 const bgImg = document.querySelector(".bg-img");
 let images = [
@@ -68,18 +68,16 @@ let images = [
   "./images/third-home-img.JPG",
   "./images/fourth-home-img.JPG",
 ];
-// const size = images[i].clientWidth;
-// console.log(size);
 
 function changeImg() {
-  bgImg.style.backgroundImage = "url(" + images[i] + ")";
-  //   // bgImg.style.transform = "translateX(" + size * i + "px)";
+  bgImg.style.backgroundImage = "url(" + images[index] + ")";
 
-  if (i < images.length - 1) {
-    i++;
+  if (index < images.length - 1) {
+    index++;
   } else {
-    i = 0;
+    index = 0;
   }
+
   setTimeout(changeImg, slideTime);
 }
 window.onload = changeImg;
