@@ -58,3 +58,26 @@ function closeSidebar() {
 for (let i = 0; i < sideLinks.length; i++) {
   sideLinks[i].addEventListener("click", closeSidebar);
 }
+
+// slide home images
+let i = 0;
+let slideTime = 3000;
+const bgImg = document.querySelector(".bg-img");
+let images = [
+  "./images/first-home-img.JPG",
+  "./images/second-home-img.JPG",
+  "./images/third-home-img.JPG",
+  "./images/fourth-home-img.JPG",
+];
+
+function changeImg() {
+  bgImg.style.backgroundImage = "url(" + images[i] + ")";
+
+  if (i < images.length - 1) {
+    i++;
+  } else {
+    i = 0;
+  }
+  setTimeout(changeImg, slideTime);
+}
+window.onload = changeImg;
