@@ -1,4 +1,3 @@
-// get date
 const date = (document.getElementById("date").innerHTML =
   new Date().getFullYear());
 
@@ -61,7 +60,7 @@ for (let i = 0; i < sideLinks.length; i++) {
 
 // slide home images
 let i = 0;
-let slideTime = 3000;
+let slideTime = 5000;
 const bgImg = document.querySelector(".bg-img");
 let images = [
   "./images/first-home-img.JPG",
@@ -69,9 +68,12 @@ let images = [
   "./images/third-home-img.JPG",
   "./images/fourth-home-img.JPG",
 ];
+// const size = images[i].clientWidth;
+// console.log(size);
 
 function changeImg() {
   bgImg.style.backgroundImage = "url(" + images[i] + ")";
+  //   // bgImg.style.transform = "translateX(" + size * i + "px)";
 
   if (i < images.length - 1) {
     i++;
