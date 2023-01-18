@@ -71,7 +71,10 @@ let images = [
 ];
 
 function changeImg() {
-  bgImg.style.backgroundImage = "url(" + images[i] + ")";
+  bgImg.style.backgroundImage =
+    "url(" +
+    images[i] +
+    "), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))";
 
   if (i < images.length - 1) {
     i++;
