@@ -50,15 +50,6 @@ h4 {
   height: 100vh;
   display: block;
   position: relative;
-  transition: transform 0.4s ease-in-out;
-}
-
-/* switch to different image on smaller screen */
-@media screen and (max-width: 700px) {
-  .bg-img {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url(./images/placeholder-img-3.jpg) center/cover no-repeat fixed;
-  }
 }
 
 /* NAVBAR */
