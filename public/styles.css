@@ -42,8 +42,11 @@ h4 {
 
 /* Background Image */
 .bg-img {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(./images/placeholder-img.jpg) center/cover no-repeat fixed;
+  background-image: url("/images/first-home-img.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   display: block;
   position: relative;
@@ -253,6 +256,9 @@ h4 {
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  /* opacity: 0.8; */
 }
 .hero-banner h1 {
   margin-bottom: 2rem;
@@ -276,6 +282,7 @@ h4 {
   height: 4.5rem;
   font-size: 30px;
   padding: 15px;
+  margin-top: 1rem;
   background: #9d7ab2;
   color: white;
   border: none;
