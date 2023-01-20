@@ -86,40 +86,38 @@ window.onload = changeImg;
 
 const videoSlide = document.querySelector(".about-vids");
 const videos = document.querySelectorAll(".about-vid");
-let count = 1;
-// get width of video
+let count = 0;
+// // get width of video
 const size = videos[0].clientWidth;
 const nextBtn = document.querySelector(".right");
 const prevBtn = document.querySelector(".left");
 
-videoSlide.style.transform = "translate(" + -size * count + ")px";
+videoSlide.style.transform = "translateX(" + -size * count + "px)";
 
 nextBtn.addEventListener("click", () => {
-  //
   if (count >= videos.length - 1) return;
-
+  videoSlide.style.transition = "transform 0.4s ease-in-out";
   count++;
-  videoSlide.style.transform = "translate(" + -size * count + ")px";
+  videoSlide.style.transform = "translateX(" + -size * count + "px)";
 });
 
 prevBtn.addEventListener("click", () => {
-  //
   if (count <= 0) return;
-
+  videoSlide.style.transition = "transform 0.4s ease-in-out";
   count--;
-  videoSlide.style.transform = "translate(" + -size * count + ")px";
+  videoSlide.style.transform = "translateX(" + -size * count + "px)";
 });
 
 // go back to original video
 videoSlide.addEventListener("transitionend", () => {
   if (videos[count].id === "last-clone") {
-    videoSlide.style.transform = "none";
+    videoSlide.style.transition = "none";
     count = videos.length - 2;
-    videoSlide.style.transform = "translate(" + -size * count + ")px";
+    videoSlide.style.transform = "translateX(" + -size * count + "px)";
   }
   if (videos[count].id === "first-clone") {
-    videoSlide.style.transform = "none";
+    videoSlide.style.transition = "none";
     count = videos.length - count;
-    videoSlide.style.transform = "translate(" + -size * count + ")px";
+    videoSlide.style.transform = "translateX(" + -size * count + "px)";
   }
 });

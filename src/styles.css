@@ -363,8 +363,9 @@ h4 {
   border-radius: 5%;
 }
 .about-vids-container {
-  width: 25rem;
-  height: 35rem;
+  width: 300px;
+  height: inherit;
+  overflow: hidden;
 }
 .arrow {
   background: #9d7ab2;
@@ -377,14 +378,14 @@ h4 {
 }
 .about-vids {
   display: flex;
-  transition: transform 0.4s ease-in-out;
-  overflow: hidden;
+  width: 300px;
+  height: 600px;
 }
-/* about text */
-/* .about-text {
-  max-width: 700px;
-  padding: 0 3rem;
-} */
+.about-vid {
+  height: inherit;
+  width: inherit;
+}
+
 .about-small {
   border-bottom: dotted 2px #9d7ab2;
   max-width: 70px;
