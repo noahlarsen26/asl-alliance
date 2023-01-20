@@ -50,23 +50,32 @@ layout: 'base.njk'
     </div>
     <!-- ABOUT -->
     <section id="about">
-      <div class="about-img-container">
-        <img
-          class="about-img img"
-          src="./images/placeholder-image.jpg"
-          alt="second placeholder image"
-        />
+      <button class="arrow left"><</button>
+      <div class="about-vids-container">
+        <video height="100%" width="100%" class="about-vids" controls>
+          <source src=".../videos/vijo.mp4"
+          type="video/mp4">
+          sorry your browser doesn't support embedded videos
+        </video>
       </div>
+      <button class="arrow right">></button>
       <article class="about-text">
         <div class="about-small">
           <h5>about us</h5>
         </div>
         <h2>meet the team</h2>
-        {%- for para in collections.para -%}
+        <div class="about-img-container">
+        <img
+          class="about-img img"
+          src="./images/about-img.JPG"
+          alt="about-image"
+        />
+      </div>
+        {# {%- for para in collections.para -%}
         <p>
           {{ para.data.description }}
         </p>
-        {%- endfor -%}
+        {%- endfor -%} #}
       </article>
     </section>
     
