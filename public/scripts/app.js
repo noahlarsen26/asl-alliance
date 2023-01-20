@@ -81,3 +81,45 @@ function changeImg() {
   setTimeout(changeImg, slideTime);
 }
 window.onload = changeImg;
+
+// slide about videos
+
+const videoSlide = document.querySelector(".about-vids");
+const videos = document.querySelectorAll(".about-vid");
+let count = 1;
+// get width of video
+const size = videos[0].clientWidth;
+const nextBtn = document.querySelector(".right");
+const prevBtn = document.querySelector(".left");
+
+videoSlide.style.transform = "translate(" + -size * count + ")px";
+
+nextBtn.addEventListener("click", () => {
+  //
+  if (count >= videos.length - 1) return;
+
+  count++;
+  videoSlide.style.transform = "translate(" + -size * count + ")px";
+});
+
+prevBtn.addEventListener("click", () => {
+  //
+  if (count <= 0) return;
+
+  count--;
+  videoSlide.style.transform = "translate(" + -size * count + ")px";
+});
+
+// go back to original video
+videoSlide.addEventListener("transitionend", () => {
+  if (videos[count].id === "last-clone") {
+    videoSlide.style.transform = "none";
+    count = videos.length - 2;
+    videoSlide.style.transform = "translate(" + -size * count + ")px";
+  }
+  if (videos[count].id === "first-clone") {
+    videoSlide.style.transform = "none";
+    count = videos.length - count;
+    videoSlide.style.transform = "translate(" + -size * count + ")px";
+  }
+});

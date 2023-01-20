@@ -375,15 +375,16 @@ h4 {
   font-size: 2rem;
   cursor: pointer;
 }
-/* .about-vids {
-  width: 100%;
-  height: 100%;
-} */
+.about-vids {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  overflow: hidden;
+}
 /* about text */
-.about-text {
+/* .about-text {
   max-width: 700px;
   padding: 0 3rem;
-}
+} */
 .about-small {
   border-bottom: dotted 2px #9d7ab2;
   max-width: 70px;
