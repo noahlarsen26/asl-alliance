@@ -250,7 +250,6 @@ h4 {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  /* opacity: 0.8; */
 }
 .hero-banner h1 {
   margin-bottom: 2rem;
@@ -331,20 +330,26 @@ h4 {
 /* END OF HEADER */
 /* ABOUT */
 #about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   max-width: 100%;
   color: black;
   background: #fff;
-  gap: 50px;
 }
-
+.about-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 100px 300px 150px 1fr;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-text {
+  height: 90%;
+  justify-self: stretch;
+}
 /* about image */
 .about-img-container {
   position: relative;
-  max-width: 571px;
 }
 .about-img {
   position: relative;
@@ -363,7 +368,6 @@ h4 {
   border-radius: 5%;
 }
 .about-vids-container {
-  width: 300px;
   height: inherit;
   overflow: hidden;
 }
@@ -376,6 +380,7 @@ h4 {
   font-size: 2rem;
   cursor: pointer;
 }
+
 .about-vids {
   display: flex;
   width: 300px;
@@ -404,10 +409,29 @@ h2 span {
 }
 
 /* about media queries */
-@media screen and (max-width: 1135px) {
-  #about {
-    padding-top: 2rem;
-    flex-direction: column;
+
+@media screen and (max-width: 935px) {
+  .right {
+    grid-area: next;
+  }
+  .left {
+    grid-area: prev;
+  }
+  .about-vids-container {
+    grid-area: video;
+  }
+  .about-text {
+    grid-area: team;
+  }
+  .about-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      ". team ."
+      "prev video next";
+  }
+  .about-text {
+    height: 100%;
+    width: 300px;
   }
   .about-img-container::before {
     visibility: hidden;
@@ -416,6 +440,10 @@ h2 span {
 @media screen and (max-width: 430px) {
   .about-img-container {
     min-width: 300px;
+  }
+  .arrow {
+    padding: 0.15rem 0.25rem;
+    font-size: 1.5rem;
   }
 }
 /* END OF ABOUT */
@@ -719,6 +747,9 @@ h2 span {
   .container-1 {
     flex-direction: column;
     gap: 0;
+  }
+  .insta {
+    margin: 0 auto;
   }
   .footer-title {
     height: 90px;
