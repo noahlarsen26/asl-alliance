@@ -33,3 +33,15 @@ collections:
     fields:
       - { label: "Paragraph Number", name: "title", widget: "string" }
       - { label: "Paragraph", name: "description", widget: "markdown" }
+  - name: "video"
+    label: "Video"
+    folder: "src/videos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Video"
+        name: "video"
+        widget: "file"
+        media_library:
+          config:
+            multiple: true
