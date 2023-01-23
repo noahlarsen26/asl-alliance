@@ -104,8 +104,7 @@ h4 {
 }
 .nav-logo {
   font-size: 2rem;
-  font-weight: bold;
-  /* border: solid 1px red; */
+  position: relative;
 }
 .logo {
   height: 4.5rem;
@@ -148,6 +147,11 @@ h4 {
 @media screen and (min-width: 775px) {
   .nav-btn {
     display: none;
+  }
+}
+@media screen and (max-width: 390px) {
+  .logo {
+    height: 2.75rem;
   }
 }
 /* END OF NAVBAR */
