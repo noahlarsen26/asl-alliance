@@ -62,15 +62,10 @@ for (let i = 0; i < sideLinks.length; i++) {
 let index = 0;
 let slideTime = 5000;
 const bgImg = document.querySelector(".bg-img");
-let images = [
-  "./images/first-home-img.JPG",
-  "./images/second-home-img.JPG",
-  "./images/third-home-img.JPG",
-  "./images/fourth-home-img.JPG",
-];
+const images = document.querySelectorAll(".images");
 
 function changeImg() {
-  bgImg.style.backgroundImage = "url(" + images[index] + ")";
+  bgImg.style.backgroundImage = "url(" + images[index].src + ")";
 
   if (index < images.length - 1) {
     index++;

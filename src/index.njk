@@ -27,11 +27,10 @@ layout: 'base.njk'
         </div>
       </aside>
       <!-- END OF SIDEBAR -->
-      <div style='display: none;' class="images">
-        <img src="./images/first-home-img.JPG" alt="">
-        <img src="./images/second-home-img.JPG" alt="">
-        <img src="./images/third-home-img.JPG" alt="">
-        <img src="./images/fourth-home-img.JPG" alt="">
+      <div style='display: none;'>
+        {%- for img in collections.img -%}
+        <img class="images" src='{{ img.data.image }}' alt="">
+        {%- endfor -%}
       </div>
       <section class="bg-img">
         <!-- HERO -->
