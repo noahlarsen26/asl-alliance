@@ -17,14 +17,7 @@ collections:
       - { label: "Event Description", name: "description", widget: "markdown" }
       - { label: "Event Date", name: "date", widget: "datetime" }
       - { label: "Event Time", name: "time", widget: "string" }
-  - name: "about"
-    label: "About Section Paragraph"
-    folder: "src/about"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Paragraph Number", name: "title", widget: "string" }
-      - { label: "Paragraph", name: "description", widget: "markdown" }
+
   - name: "background images"
     label: "Background Images"
     folder: "src/background-images"
@@ -32,6 +25,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
+
   - name: "banner"
     label: "Banner Paragraph"
     folder: "src/banner"
@@ -40,6 +34,7 @@ collections:
     fields:
       - { label: "Paragraph Number", name: "title", widget: "string" }
       - { label: "Paragraph", name: "description", widget: "markdown" }
+
   - name: "video"
     label: "Video"
     folder: "src/videos"
