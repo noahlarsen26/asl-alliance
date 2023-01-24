@@ -75,11 +75,13 @@ layout: 'base.njk'
         </div>
         <h2>meet the team</h2>
         <div class="about-img-container">
+          {%- for team in collections.team -%}
         <img
           class="about-img img"
-          src="./images/about-img.JPG"
+          src="{{team.data.image}}"
           alt="about-image"
         />
+        {%- endfor -%}
       </div>
       </article>
       </div>

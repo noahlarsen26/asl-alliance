@@ -47,3 +47,11 @@ collections:
         media_library:
           config:
             multiple: true
+
+  - name: "team image"
+    label: "Team Picture"
+    folder: "src/team-img"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Picture", name: "title", widget: "image" }
