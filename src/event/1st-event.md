@@ -1,10 +1,10 @@
 ---
-title: Event One
+title: ASL Game Night Scavenger Hunt
 type: Alliance Event
-description: Lorem ipsum dolor, sit amet consectetur adipisicing
-  elit.Blanditiis, porro! Hic molestias deleniti voluptate numquam adipisci
-  accusamus pariatur culpa a eum nemo totam, magni vitae, vel exercitationem
-  quisquam, magnam fugit!a
-date: 2022-05-08T06:00:00.000Z
-time: 7:00pm
+description: "Get your magnifying glasses ready for our ASL Game Night:
+  Scavenger Hunt event!!! It’s this Tuesday, January 31st from 6-8pm. You will
+  start in the Lower Atrium and follow clues that take you around campus! We
+  can’t wait to see what you uncover!"
+date: 2023-02-01T00:00:00.000Z
+time: 6:00pm
 ---
