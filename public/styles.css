@@ -531,6 +531,7 @@ h2 span {
 .single-event-title {
   height: 100px;
   color: white;
+  font-size: 1.5rem;
 }
 .event-underline {
   background: #9d7ab2;
